@@ -1,7 +1,8 @@
 from flask import Flask, request, render_template
 import requests
+import os
 
-TOKEN = '5815143397:AAFLbtbPRKGqVngTbDmw-4ZfXqqeOBPIUM8'
+TOKEN = os.environ.get('TELEGRAM_BOT_TOKEN')
 TELEGRAM_API_URL = f'https://api.telegram.org/bot{TOKEN}/'
 
 app = Flask(__name__)
